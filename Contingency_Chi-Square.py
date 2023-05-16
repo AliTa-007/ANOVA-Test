@@ -19,6 +19,13 @@ class Table:
         self.content_sum = None
         self.total_size = None
         self.expected_content = None
+        print(
+            "Welcome. This is Ali Tasbas' Chi-Square test for contingency tables. You have created an instance. "
+            "Here are some instructions to aid you through the module. \n First things first. Some formats to "
+            "help you input the correct table.\n 1. Populations are horizontal placed as rows\n 2. Attributes are vertical "
+            "placed as columns\n 3. After population and attribute counts, all inputs are required to be in a list format. eg.[a,b,c]"
+            "\n 4. After creating an instance, create_table(): walks you through the process of creating the table."
+            " __.test(alpha = significance) will conduct a hypothesis test.\n More to come...")
 
     # Possibly Initialize the table with this "method"
     def create_table(self):
@@ -84,12 +91,3 @@ class Table:
 
     def __str__(self):
         return "{}".format(self.content)
-
-
-print("Welcome. This is Ali Tasbas' Chi-Square test for contingency tables. \n First things first. Some formats to "
-      "help you input the correct table.\n 1. Populations are horizontal placed as rows\n 2.Attributes are vertical "
-      "placed as columns\n 3.After pop and attributes all inputs are required to be in a list format. eg.[a,b,c]\n More to come...")
-
-data = Table()
-data.create_table()
-data.test(0.05)
